@@ -1,0 +1,14 @@
+# The main pipeline for bronze_to_silver
+resources:
+  pipelines:
+    bronze_to_silver_pipeline:
+      name: bronze_to_silver_pipeline
+      ## Specify the 'catalog' field to configure this pipeline to make use of Unity Catalog:
+      # catalog: catalog_name
+      schema: bronze_to_silver_${bundle.target}
+      libraries:
+        - notebook:
+            path: ../src/dlt_pipeline.ipynb
+
+      configuration:
+        bundle.sourcePath: ${workspace.file_path}/src
