@@ -6,8 +6,8 @@ import dlt
 
 @dlt.view
 def customer_base():
-    df_customer = spark.table("bronze.customer")
-    df_contact = spark.table("bronze.contact")
+    df_customer = spark.table("bronze_db.customer")
+    df_contact = spark.table("bronze_db.contact")
 
     df_customer_with_contact_info = df_customer.alias("customer").join(
         df_contact.alias("contact"),
