@@ -8,7 +8,9 @@ resources:
       schema: bronze_to_silver_${bundle.target}
       libraries:
         - notebook:
-            path: ../src/dlt_pipeline.ipynb
+            path: ../src/dlt_pipelines/customer_base
+        - notebook:
+            path: ../src/dlt_pipelines/customer
 
       configuration:
         bundle.sourcePath: ${workspace.file_path}/src
