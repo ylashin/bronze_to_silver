@@ -1,0 +1,11 @@
+{
+    "servers": {
+        "my-mcp-server": {
+            "type": "stdio",
+            "command": "/Users/yousry/code/mcp_server/.venv/bin/python",
+            "args": [
+                "/Users/yousry/code/mcp_server/main.py"
+            ]
+        }
+    }
+}

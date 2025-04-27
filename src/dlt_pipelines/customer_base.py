@@ -11,7 +11,7 @@ def customer_base():
 
     df_customer_with_contact_info = df_customer.alias("customer").join(
         df_contact.alias("contact"),
-        don="customer.customer_id = contact.customer_id",
+        on="customer.customer_id = contact.customer_id",
         how="left"
     ).where("customer.is_active = True").select(
         "customer.customer_id",
